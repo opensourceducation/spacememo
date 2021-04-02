@@ -8,16 +8,16 @@ export function SpacingMemo(config = []){
     ;this.valuesMap = config.valuesMap ? config.valuesMap : {}
   }
   return {
-    insertValue:(valueId, {initialPositionInQueue = this.valuesQueue.length, domain = 'beginner'}) => {
+    insertValue:(valueId, {domain = 'beginner', initialPositionInQueue = this.valuesQueue.length}) => {
       initialPositionInQueue = initialPositionInQueue > this.valuesQueue.length ? this.valuesQueue.length : initialPositionInQueue
-      if(this.valuesQueue.length === 0){
+      if(this.valuesQueue.length == 0){
         this.valuesQueue.push(valueId)
       } else {
         this.valuesQueue.splice(initialPositionInQueue,0,valueId)
       }
       if(!this.valuesMap[valueId]){
         this.valuesMap[valueId] = {
-          score: domain === 'beginner' ? 0 : domain === 'medium' ? 15 : domain === 'pro' ? 30 : 0,
+          score: domain == 'beginner' ? 0 : domain == 'medium' ? 15 : domain == 'master' ? 30 : 0,
           needsRevisionScore: null,
           implemented: false,
         }
@@ -28,7 +28,7 @@ export function SpacingMemo(config = []){
       const evaluateElement = this.valuesMap[this.valuesQueue[0]]
       if(goodOrBadResponseBoolean){
         evaluateElement.score++
-        evaluateElement.needsRevisionScore === 2 ? evaluateElement.needsRevisionScore = 3 : evaluateElement.needsRevisionScore === 3 ? evaluateElement.needsRevisionScore = 5 : null
+        evaluateElement.needsRevisionScore == 2 ? evaluateElement.needsRevisionScore = 3 : evaluateElement.needsRevisionScore == 3 ? evaluateElement.needsRevisionScore = 5 : null
         let position = evaluateElement.needsRevisionScore ? evaluateElement.needsRevisionScore : evaluateElement.score
         let element = this.valuesQueue.shift()
         this.valuesQueue.splice(position,0,element)
