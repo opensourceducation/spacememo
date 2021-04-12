@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+venv/
+
+
+# Optional npm cache directory
+.npm
+
+
+# another trash
+package-lock.json
