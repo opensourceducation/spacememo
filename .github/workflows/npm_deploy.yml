@@ -1,0 +1,21 @@
+name: Test and deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          cd javascript
+          npm install
+      - name: Run tests
+        run: npm test
+      - name: Deploy to npm
+        if: success()
+        run: npm publish

@@ -4,9 +4,20 @@
   "description": "A nanolibrary for apply the “space memo repetition” in learning purposes apps",
   "main": "spacememo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "babel src --out-dir compiled --copy-files && jest"
   },
-  "keywords": ["learning", "microlearning","memorization","javascript"],
+  "keywords": [
+    "learning",
+    "microlearning",
+    "memorization",
+    "javascript"
+  ],
   "author": "opensourceducation",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "jest": "^29.3.1"
+  }
 }

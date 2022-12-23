@@ -8,8 +8,9 @@ export function SpacingMemo(config = []){
     ;this.valuesMap = config.valuesMap ? config.valuesMap : {}
   }
   return {
-    insertValue:(valueId, {domain = 'beginner', initialPositionInQueue = this.valuesQueue.length}) => {
-      initialPositionInQueue = initialPositionInQueue > this.valuesQueue.length ? this.valuesQueue.length : initialPositionInQueue
+    insertValue:(valueId, optionalParams = {domain: 'beginner', initialPositionInQueue: this.valuesQueue.length}) => {
+      let {domain, initialPositionInQueue} = optionalParams 
+      initialPositionInQueue = initialPositionInQueue > this.valuesQueue.length || initialPositionInQueue == undefined ? this.valuesQueue.length : initialPositionInQueue
       if(this.valuesQueue.length == 0){
         this.valuesQueue.push(valueId)
       } else {
@@ -17,19 +18,19 @@ export function SpacingMemo(config = []){
       }
       if(!this.valuesMap[valueId]){
         this.valuesMap[valueId] = {
-          score: domain == 'beginner' ? 0 : domain == 'medium' ? 15 : domain == 'master' ? 30 : 0,
+          score: domain == 'medium' ? 15 : domain == 'master' ? 30 : 0,
           needsRevisionScore: null,
           implemented: false,
         }
       }
     },
     getValue:()=> this.valuesQueue[0],
-    evaluate(goodOrBadResponseBoolean){
+    evaluate:(goodOrBadResponseBoolean)=>{
       const evaluateElement = this.valuesMap[this.valuesQueue[0]]
       if(goodOrBadResponseBoolean){
         evaluateElement.score++
         evaluateElement.needsRevisionScore == 2 ? evaluateElement.needsRevisionScore = 3 : evaluateElement.needsRevisionScore == 3 ? evaluateElement.needsRevisionScore = 5 : null
-        let position = evaluateElement.needsRevisionScore ? evaluateElement.needsRevisionScore : evaluateElement.score
+        let position = evaluateElement.needsRevisionScore || evaluateElement.score
         let element = this.valuesQueue.shift()
         this.valuesQueue.splice(position,0,element)
       }else{
