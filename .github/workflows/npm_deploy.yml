@@ -12,7 +12,8 @@ jobs:
       - uses: actions/setup-node@v2
       - name: Install dependencies
         run: |
-          cd javascript
+          echo $(ls)
+          cd javascript/
           npm install
       - name: Run tests
         run: npm test
