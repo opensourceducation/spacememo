@@ -3,7 +3,7 @@ name: Test & deploy to npm
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   test-and-deploy:

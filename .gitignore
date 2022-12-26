@@ -1,7 +1,7 @@
 # Dependency directories
 node_modules/
 venv/
-
+compiled/
 
 # Optional npm cache directory
 .npm
