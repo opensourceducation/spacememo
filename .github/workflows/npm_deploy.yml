@@ -10,14 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2
-        with:
-          node-version: 16.3.0
       - name: Install dependencies
         run: |
           cd javascript
           npm install
       - name: Run tests
-        run: npm run test
+        run: npm test
       - name: Deploy to npm
         if: success()
         run: npm publish
