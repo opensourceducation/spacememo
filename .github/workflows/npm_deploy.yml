@@ -14,8 +14,8 @@ jobs:
           node-version: 16
       - name: Install dependencies
         run: |
-          ls -d */
-          echo $(ls -d */)
+          ls 
+          echo $(ls)
           npm install
       - name: Run tests
         run: npm test
