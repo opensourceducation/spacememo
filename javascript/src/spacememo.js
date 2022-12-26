@@ -1,12 +1,9 @@
-export function SpacingMemo(config = []){
-  this.valuesQueue = []
-  ;this.valuesMap = {}
-  if(Array.isArray(config)){
-    config.forEach((element)=> insertValue(element))
-  } else {
-    this.valuesQueue = config.valuesQueue ? config.valuesQueue : []
-    ;this.valuesMap = config.valuesMap ? config.valuesMap : {}
-  }
+export function SpacingMemo(config = {}){
+  this.valuesQueue = config.valuesQueue || []
+  ;this.valuesMap = config.valuesMap || {}
+  if(config){
+    (!config.valuesQueue || !config.valuesQueue) && new Error('Your Spacing Memo config Object is broken. Please Review it: ' + config)
+  } 
   return {
     insertValue:(valueId, optionalParams = {domain: 'beginner', initialPositionInQueue: this.valuesQueue.length}) => {
       let {domain, initialPositionInQueue} = optionalParams 

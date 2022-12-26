@@ -152,4 +152,34 @@ test('Should instantiate SpacingMemo queue with preconfigured data', function ()
   var spacingMemo1 = new _spacememo.SpacingMemo();
   expect(spacingMemo1.getSpaceMap().valuesQueue).toEqual([]);
   expect(spacingMemo1.getSpaceMap().valuesMap).toEqual({});
+  var spacingMemo2 = new _spacememo.SpacingMemo({
+    valuesQueue: ['value1', 'value2'],
+    valuesMap: {
+      value1: {
+        score: 0,
+        needsRevisionScore: null,
+        implemented: false
+      },
+      value2: {
+        score: 0,
+        needsRevisionScore: null,
+        implemented: false
+      }
+    }
+  });
+  expect(spacingMemo2.getSpaceMap()).toEqual({
+    valuesQueue: ['value1', 'value2'],
+    valuesMap: {
+      value1: {
+        score: 0,
+        needsRevisionScore: null,
+        implemented: false
+      },
+      value2: {
+        score: 0,
+        needsRevisionScore: null,
+        implemented: false
+      }
+    }
+  });
 });

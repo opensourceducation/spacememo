@@ -6,16 +6,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.SpacingMemo = SpacingMemo;
 function SpacingMemo() {
   var _this = this;
-  var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  this.valuesQueue = [];
-  this.valuesMap = {};
-  if (Array.isArray(config)) {
-    config.forEach(function (element) {
-      return insertValue(element);
-    });
-  } else {
-    this.valuesQueue = config.valuesQueue ? config.valuesQueue : [];
-    this.valuesMap = config.valuesMap ? config.valuesMap : {};
+  var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  this.valuesQueue = config.valuesQueue || [];
+  this.valuesMap = config.valuesMap || {};
+  if (config) {
+    !config.valuesQueue && new Error('Your Spacing Memo config Object is broken. Please Review it: ' + config.valuesQueue);
+    !config.valuesMap && new Error('Your Spacing Memo config Object is broken. Please Review it: ' + config.valuesMap);
   }
   return {
     insertValue: function insertValue(valueId) {
