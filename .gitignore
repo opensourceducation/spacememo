@@ -5,6 +5,10 @@ venv/
 
 # Optional npm cache directory
 .npm
+__pycache__/
+*.egg-info/
+.cache/
+*.pyc
 
 
 # another trash

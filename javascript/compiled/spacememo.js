@@ -46,12 +46,12 @@ function SpacingMemo() {
       var evaluateElement = _this.valuesMap[_this.valuesQueue[0]];
       if (goodOrBadResponseBoolean) {
         evaluateElement.score++;
-        evaluateElement.needsRevisionScore == 2 ? evaluateElement.needsRevisionScore = 3 : evaluateElement.needsRevisionScore == 3 ? evaluateElement.needsRevisionScore = 5 : null;
+        evaluateElement.needsRevisionScore == 1 ? evaluateElement.needsRevisionScore = 3 : evaluateElement.needsRevisionScore == 3 ? evaluateElement.needsRevisionScore = 5 : null;
         var position = evaluateElement.needsRevisionScore || evaluateElement.score;
         var element = _this.valuesQueue.shift();
         _this.valuesQueue.splice(position, 0, element);
       } else {
-        evaluateElement.needsRevisionScore = 2;
+        evaluateElement.needsRevisionScore = 1;
         evaluateElement.score > 0 && evaluateElement.score--;
       }
     },

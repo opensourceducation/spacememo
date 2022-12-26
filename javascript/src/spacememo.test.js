@@ -65,7 +65,7 @@ test('evaluate should decrease the score and move the value to a lower position 
   expect(spacingMemo.getSpaceMap().valuesQueue).toEqual(['value1', 'value2']);
   
   expect(spacingMemo.getSpaceMap().valuesMap).toEqual({
-    value1: {score: 0, needsRevisionScore: 2, implemented: false},
+    value1: {score: 0, needsRevisionScore: 1, implemented: false},
     value2: {score: 0, needsRevisionScore: null, implemented: false},
   });
 });
@@ -82,3 +82,9 @@ test('getSpaceMap should return the valuesQueue and valuesMap', () => {
     },
   });
 }); 
+
+test('Should instantiate SpacingMemo queue with preconfigured data', () => {
+  const spacingMemo1 = new SpacingMemo();
+  expect(spacingMemo1.getSpaceMap().valuesQueue).toEqual([]);
+  expect(spacingMemo1.getSpaceMap().valuesMap).toEqual({});
+})

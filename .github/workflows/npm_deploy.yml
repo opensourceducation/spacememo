@@ -1,4 +1,4 @@
-name: Test and deploy
+name: Test & deploy to npm
 
 on:
   push:
