@@ -7,10 +7,13 @@
     "test": "babel src --out-dir compiled --copy-files && jest --verbose"
   },
   "keywords": [
+    "srs",
     "learning",
     "microlearning",
     "memorization",
-    "javascript"
+    "javascript",
+    "space-repetition",
+    "python"
   ],
   "author": "opensourceducation",
   "license": "MIT",
