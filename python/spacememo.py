@@ -1,14 +1,9 @@
 class SpacingMemo:
-    def __init__(self, config=[]):
-        self._values_queue = []
-        self._values_map = {}
-        if isinstance(config, list):
-            [self.insertValue(element) for element in config]
-        else:
-            self._values_queue = config['values_queue'] if config['values_queue'] else [
-            ]
-            self._values_map = config['values_map'] if config['values_map'] else {
-            }
+    def __init__(self, config={'values_queue': [], 'values_map': {}}):
+        self._values_queue = config['values_queue'] if config['values_queue'] else [
+        ]
+        self._values_map = config['values_map'] if config['values_map'] else {
+        }
 
     def insertValue(self, valueId, optionalParams={'domain': 'beginner', 'initialPositionInQueue': None}):
         domain = optionalParams['domain']

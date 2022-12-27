@@ -67,3 +67,13 @@ def test_evaluate_negative():
     assert memo.getSpaceMap()['values_queue'] == ['value3', 'value2', 'value1']
     assert memo.getSpaceMap()['values_map'] == {'value1': {'score': 2, 'needsRevisionScore': 5, 'implemented': False}, 'value2': {
         'score': 2, 'needsRevisionScore': None, 'implemented': False}, 'value3': {'score': 1, 'needsRevisionScore': None, 'implemented': False}}
+
+
+def test_insert_value_any_value():
+    memo = SpacingMemo()
+    assert memo.getSpaceMap()['values_queue'] == []
+    assert memo.getSpaceMap()['values_map'] == {}
+    memo2 = SpacingMemo({'values_queue': ['value1'], 'values_map': {'value1': {'score': 2, 'needsRevisionScore': 5, 'implemented': False}, 'value2': {
+        'score': 2, 'needsRevisionScore': None, 'implemented': False}, 'value3': {'score': 1, 'needsRevisionScore': None, 'implemented': False}}})
+    assert memo2.getSpaceMap() == {'values_queue': ['value1'], 'values_map': {'value1': {'score': 2, 'needsRevisionScore': 5, 'implemented': False}, 'value2': {
+        'score': 2, 'needsRevisionScore': None, 'implemented': False}, 'value3': {'score': 1, 'needsRevisionScore': None, 'implemented': False}}}
