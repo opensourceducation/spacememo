@@ -25,6 +25,7 @@ jobs:
     - name: Run tests
       run: |
         pytest
+    - uses: pypa/gh-action-pypi-publish@release/v1
     - name: Deploy to PyPI
       if: success()
       run: |
