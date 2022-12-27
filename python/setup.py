@@ -8,7 +8,7 @@ setup(
     name='mi-script',
     python_requires=">=3.6",
     version='1.0.0',
-    scripts=['mi-script.py']
+    scripts=['mi-script.py'],
     author='opensourceducation',
     author_email='githubpersonalfor@gmail.com',
     description='A python/javascript nanolibrary for apply the “space memo repetition” in learning purposes apps',

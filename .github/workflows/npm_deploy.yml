@@ -22,11 +22,12 @@ jobs:
       - name: Run tests
         run: |
           cd javascript/
-          npm test
+          npm run test
       - name: Deploy to npm
         if: success()
         run: |
           cd javascript/
-          npm publish
+          npm run semantic-release
+          npm publish /src/spacememo.js
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
