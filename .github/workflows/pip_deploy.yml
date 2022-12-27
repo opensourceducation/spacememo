@@ -18,6 +18,7 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: |
+        ls
         python -m pip install --upgrade pip
         pip install pytest
         pip install twine
@@ -28,6 +29,6 @@ jobs:
       if: success()
       run: |
         pip install --upgrade twine
-        python setup.py sdist bdist_wheel
+        python /home/runner/work/spacememo/python/setup.py sdist bdist_wheel
         twine check dist/*
         twine upload dist/*
