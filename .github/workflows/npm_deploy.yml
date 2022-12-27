@@ -18,12 +18,15 @@ jobs:
       - name: Install dependencies
         run: |
           cd javascript/
-          ls
           npm install
       - name: Run tests
-        run: npm test
+        run: |
+          cd javascript/
+          npm test
       - name: Deploy to npm
         if: success()
-        run: npm publish
+        run: |
+          cd javascript/
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}

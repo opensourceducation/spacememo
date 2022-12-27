@@ -18,7 +18,7 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: |
-        ls
+        cd python/
         python -m pip install --upgrade pip
         pip install pytest
         pip install twine
@@ -28,7 +28,8 @@ jobs:
     - name: Deploy to PyPI
       if: success()
       run: |
+        cd python/
         pip install --upgrade twine
-        python /home/runner/work/spacememo/python/setup.py sdist bdist_wheel
+        python setup.py sdist bdist_wheel
         twine check dist/*
         twine upload dist/*
