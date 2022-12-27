@@ -2,6 +2,7 @@
 node_modules/
 venv/
 compiled/
+process.env
 
 # Optional npm cache directory
 .npm
@@ -11,5 +12,3 @@ __pycache__/
 *.pyc
 
 
-# another trash
-package-lock.json
