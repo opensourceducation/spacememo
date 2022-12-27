@@ -102,5 +102,3 @@ test('Should instantiate SpacingMemo queue with preconfigured data', () => {
     },
   })
 })
-
-test('Should Thorw error if spacememo config object is broken')

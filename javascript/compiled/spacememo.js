@@ -10,8 +10,7 @@ function SpacingMemo() {
   this.valuesQueue = config.valuesQueue || [];
   this.valuesMap = config.valuesMap || {};
   if (config) {
-    !config.valuesQueue && new Error('Your Spacing Memo config Object is broken. Please Review it: ' + config.valuesQueue);
-    !config.valuesMap && new Error('Your Spacing Memo config Object is broken. Please Review it: ' + config.valuesMap);
+    (!config.valuesQueue || !config.valuesQueue) && new Error('Your Spacing Memo config Object is broken. Please Review it: ' + config);
   }
   return {
     insertValue: function insertValue(valueId) {
