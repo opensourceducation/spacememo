@@ -33,7 +33,7 @@ jobs:
         pip install --upgrade twine
         python setup.py sdist bdist_wheel
         ls
-        twine check dist/
+        twine check dist/spacememo-0.1.0.tar.gz
         twine upload dist/spacememo-0.1.0.tar.gz
       env:
         TWINE_USERNAME: __token__

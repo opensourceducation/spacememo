@@ -19,24 +19,20 @@ jobs:
         run: |
           cd javascript/
           npm install
-          npm install -g @actions/create-or-update-pull-request@v2
-          npm install -g @actions/get-version@v2
-          npm install -g @actions/increment-version@v2
       - name: Get current version
-        uses: actions/get-version@v2
-        id: version
-        with:
-          path: package.json
+        run: |
+          cd javascript/
+          npm version --no-git-tag-version patch
       - name: Increment version
-        uses: actions/increment-version@v2
-        with:
-          version: ${{ steps.version.outputs.version }}
+        run: |
+          cd javascript/
+          npm version patch
       - name: Commit and push new version
-        uses: actions/create-or-update-pull-request@v2
-        with:
-          commit_message: "Release v${{ steps.version.outputs.version }}"
-          branch_name: main
-          token: ${{ secrets.TOKEN_GITHUB }}
+        run: |
+          cd javascript/
+          git add package.json
+          git commit -m "Release v$(node -p "require('./package.json').version")"
+          git push
       - name: Run tests
         run: |
           cd javascript/
