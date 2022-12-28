@@ -3,7 +3,6 @@
 <p align=center>📘 A python/javascript nanolibrary for apply the “space memo repetition” in learning purposes apps 📙 </p>
 
 <br>
-
 <p align="center">
   <img src="https://github.com/opensourceducation/spacememo/actions/workflows/npm_deploy.yml/badge.svg">
 </p>
@@ -21,9 +20,24 @@ Forget to implement complex algorithms and bussiness logical process to know whe
 
 Ideal for quizzes, micro learning, and practical exercises what requires domain
 
-<h2 align="center">Usage</h2>
+<br>
+<h2 align="center">Installation</h2>
 
 <h4 align="center">Javascript</h4>
+```
+
+npm install spacememo
+
+```
 
 <br>
 <h4 align="center">Python</h4>
+```
+
+pip install spacememo
+
+```
+
+<br>
+<h2 align="center">Usage</h2>
+```
