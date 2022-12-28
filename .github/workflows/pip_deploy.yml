@@ -29,6 +29,7 @@ jobs:
       run: |
         cd python/
         python setup.py sdist upload
-      uses: pypa/gh-action-pypi-publish@release/v1
+        twine check dist/*
+        twine upload dist/*
       with:
         password: ${{ secrets.PYPI_PUBLISH }}
