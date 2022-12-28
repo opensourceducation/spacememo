@@ -19,7 +19,6 @@ jobs:
         run: |
           cd javascript/
           npm install
-
       - name: Get current version
         uses: actions/get-version@v2
         id: version
@@ -35,7 +34,6 @@ jobs:
           commit_message: "Release v${{ steps.version.outputs.version }}"
           branch_name: main
           token: ${{ secrets.TOKEN_GITHUB }}
-
       - name: Run tests
         run: |
           cd javascript/
