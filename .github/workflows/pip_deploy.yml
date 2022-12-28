@@ -31,5 +31,6 @@ jobs:
         python setup.py sdist upload
         twine check dist/*
         twine upload dist/*
-      with:
-        password: ${{ secrets.PYPI_PUBLISH }}
+      env:
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+        TWINE_PASSWORD: ${{ secrets.PYPI_PUBLISH }}
