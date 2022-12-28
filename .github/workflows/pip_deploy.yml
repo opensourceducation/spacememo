@@ -32,8 +32,8 @@ jobs:
         cd python/
         pip install --upgrade twine
         python setup.py sdist bdist_wheel
-        twine check dist/*
-        twine upload dist/*
+        twine check ./spacememo.py
+        twine upload ./spacememo.py
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_PUBLISH }}
