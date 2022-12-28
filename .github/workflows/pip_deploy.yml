@@ -33,6 +33,13 @@ jobs:
         pip install --upgrade twine
         python setup.py sdist bdist_wheel
         ls
+        echo $(ls)
+        if [ -d "dist" ] && [ -f "dist/spacememo-0.1.0.tar.gz" ]; then
+        echo "dist directory and file found"
+        else
+        echo "dist directory or file not found"
+        exit 1
+        fi
         twine check dist/spacememo-0.1.0.tar.gz
         twine upload dist/spacememo-0.1.0.tar.gz
       env:
