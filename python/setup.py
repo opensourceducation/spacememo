@@ -5,7 +5,14 @@
 from setuptools import setup
 
 setup(
-    name='mi-script',
+    # ...
+    long_description=open('../README.md').read(),
+    long_description_content_type='text/markdown',
+    # ...
+)
+
+setup(
+    name='spacememo',
     python_requires=">=3.6",
     version='1.0.0',
     scripts=['spacememo.py'],
