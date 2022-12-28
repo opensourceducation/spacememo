@@ -1,2 +1,4 @@
 compiled/
 *.test.js
+semantic-release.config.js
+.babelrc
