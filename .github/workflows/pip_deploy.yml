@@ -40,8 +40,8 @@ jobs:
         echo "dist directory or file not found"
         exit 1
         fi
-        twine check dist/*
-        twine upload dist/*
+        twine check ./dist/*
+        twine upload ./dist/*
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_PUBLISH }}
