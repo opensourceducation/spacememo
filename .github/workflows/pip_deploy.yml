@@ -21,19 +21,14 @@ jobs:
         cd python/
         python -m pip install --upgrade pip
         pip install pytest
-        pip install twine
     - name: Run tests
       run: |
         pytest
-    - uses: pypa/gh-action-pypi-publish@release/v1
     - name: Deploy to PyPI
       if: success()
       run: |
         cd python/
-        pip install --upgrade twine
-        python setup.py sdist bdist_wheel
-        twine check /dist/*
-        twine upload /dist/*
+        python setup.py sdist upload
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_PUBLISH }}
