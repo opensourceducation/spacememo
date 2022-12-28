@@ -15,7 +15,6 @@ setup(
     long_description='Ideal for quizzes, micro learning, and practical exercises what requires domain. Repeat the information for the optimal learning process of the user ',
     long_description_content_type='text/markdown',
     url='https://github.com/opensourceducation',
-    packages=['spacememo'],
     license='MIT license',
     classifiers=[
         'Programming Language :: Python :: 3',
