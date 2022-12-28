@@ -16,7 +16,7 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/opensourceducation',
     packages=['spacememo'],
-    license='MIT license'
+    license='MIT license',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Intended Audience :: Education'
