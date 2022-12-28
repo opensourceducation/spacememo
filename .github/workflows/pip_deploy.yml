@@ -29,6 +29,6 @@ jobs:
       run: |
         cd python/
         python setup.py sdist upload
-      env:
-        PYPI_USERNAME: __token__
-        PYPI_PASSWORD: ${{ secrets.PYPI_PUBLISH }}
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_PUBLISH }}

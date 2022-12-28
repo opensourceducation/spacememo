@@ -4,25 +4,26 @@
 
 from setuptools import setup
 
-setup(
-    # ...
-    long_description=open('../README.md').read(),
-    long_description_content_type='text/markdown',
-    # ...
-)
 
 setup(
     name='spacememo',
     python_requires=">=3.6",
-    version='1.0.0',
+    version='0.1.0',
     scripts=['spacememo.py'],
     author='opensourceducation',
     author_email='githubpersonalfor@gmail.com',
-    description='A python/javascript nanolibrary for apply the “space memo repetition” in learning purposes apps',
-    long_description='Ideal for quizzes, micro learning, and practical exercises what requires domain. Repeat the information for the optimal learning process of the user ',
+    description='📘 a python nanolibrary for apply the “space memo repetition” in learning purposes apps 📙',
+    long_description=open('../README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/opensourceducation',
     license='MIT license',
+    keywords=['srs',
+              'learning',
+              'microlearning',
+              'memorization',
+              'javascript',
+              'space-repetition',
+              'python'],
     classifiers=[
         'Programming Language :: Python :: 3',
         'Intended Audience :: Education'
