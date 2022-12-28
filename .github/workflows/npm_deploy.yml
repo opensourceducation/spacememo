@@ -19,6 +19,23 @@ jobs:
         run: |
           cd javascript/
           npm install
+
+      - name: Get current version
+        uses: actions/get-version@v1
+        id: version
+        with:
+          path: package.json
+      - name: Increment version
+        uses: actions/increment-version@v1
+        with:
+          version: ${{ steps.version.outputs.version }}
+      - name: Commit and push new version
+        uses: actions/create-or-update-pull-request@v1
+        with:
+          commit_message: "Release v${{ steps.version.outputs.version }}"
+          branch_name: main
+          token: ${{ secrets.TOKEN_GITHUB }}
+
       - name: Run tests
         run: |
           cd javascript/
@@ -27,7 +44,6 @@ jobs:
         if: success()
         run: |
           cd javascript/
-          npm run semantic-release
           npm publish /src
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
