@@ -12,7 +12,7 @@ setup(
     version='0.1.0',
     author='opensourceducation',
     author_email='githubpersonalfor@gmail.com',
-    description='📘 a python nanolibrary for apply the “space memo repetition” in learning purposes apps 📙',
+    description='📘 a python nanolibrary for apply “spaced repetition” in learning purposes apps 📙',
     long_description=open('../README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/opensourceducation',

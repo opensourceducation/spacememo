@@ -1,9 +1,9 @@
 import pytest
-from spacememo import SpacingMemo
+from spacememo import SpacedMemo
 
 
 def test_insert_value():
-    memo = SpacingMemo()
+    memo = SpacedMemo()
     memo.insertValue('a')
     assert memo.getSpaceMap()['values_queue'] == ['a']
     assert memo.getSpaceMap()['values_map'] == {
@@ -17,7 +17,7 @@ def test_insert_value():
 
 
 def test_get_value():
-    memo = SpacingMemo()
+    memo = SpacedMemo()
     memo.insertValue('value1')
     memo.insertValue('value2')
     memo.insertValue('value3')
@@ -26,7 +26,7 @@ def test_get_value():
 
 
 def test_evaluate_positive():
-    memo = SpacingMemo()
+    memo = SpacedMemo()
     memo.insertValue('value1')
     memo.insertValue('value2')
     assert memo.getSpaceMap()['values_queue'] == ['value1', 'value2']
@@ -43,7 +43,7 @@ def test_evaluate_positive():
 
 
 def test_evaluate_negative():
-    memo = SpacingMemo()
+    memo = SpacedMemo()
     memo.insertValue('value1')
     memo.insertValue('value2')
     memo.insertValue('value3')
@@ -70,10 +70,10 @@ def test_evaluate_negative():
 
 
 def test_insert_value_any_value():
-    memo = SpacingMemo()
+    memo = SpacedMemo()
     assert memo.getSpaceMap()['values_queue'] == []
     assert memo.getSpaceMap()['values_map'] == {}
-    memo2 = SpacingMemo({'values_queue': ['value1'], 'values_map': {'value1': {'score': 2, 'needsRevisionScore': 5, 'implemented': False}, 'value2': {
+    memo2 = SpacedMemo({'values_queue': ['value1'], 'values_map': {'value1': {'score': 2, 'needsRevisionScore': 5, 'implemented': False}, 'value2': {
         'score': 2, 'needsRevisionScore': None, 'implemented': False}, 'value3': {'score': 1, 'needsRevisionScore': None, 'implemented': False}}})
     assert memo2.getSpaceMap() == {'values_queue': ['value1'], 'values_map': {'value1': {'score': 2, 'needsRevisionScore': 5, 'implemented': False}, 'value2': {
         'score': 2, 'needsRevisionScore': None, 'implemented': False}, 'value3': {'score': 1, 'needsRevisionScore': None, 'implemented': False}}}

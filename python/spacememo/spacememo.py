@@ -1,4 +1,4 @@
-class SpacingMemo:
+class SpacedMemo:
     def __init__(self, config={'values_queue': [], 'values_map': {}}):
         self._values_queue = config['values_queue'] if config['values_queue'] else [
         ]

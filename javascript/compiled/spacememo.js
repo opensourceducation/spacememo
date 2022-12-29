@@ -3,8 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SpacingMemo = SpacingMemo;
-function SpacingMemo() {
+exports.SpacedMemo = SpacedMemo;
+function SpacedMemo() {
   var _this = this;
   var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   this.valuesQueue = config.valuesQueue || [];

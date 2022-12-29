@@ -2,7 +2,7 @@
 
 var _spacememo = require("./spacememo.js");
 test('insertValue should insert a new value in the queue and the map', function () {
-  var spacingMemo = new _spacememo.SpacingMemo();
+  var spacingMemo = new _spacememo.SpacedMemo();
   spacingMemo.insertValue('value1');
   expect(spacingMemo.getSpaceMap().valuesQueue).toEqual(['value1']);
   expect(spacingMemo.getSpaceMap().valuesMap).toEqual({
@@ -14,7 +14,7 @@ test('insertValue should insert a new value in the queue and the map', function 
   });
 });
 test('insertValue first in first out', function () {
-  var spacingMemo = new _spacememo.SpacingMemo();
+  var spacingMemo = new _spacememo.SpacedMemo();
   spacingMemo.insertValue('value1');
   spacingMemo.insertValue('value2', {
     domain: 'beginner'
@@ -40,7 +40,7 @@ test('insertValue first in first out', function () {
   });
 });
 test('getValue should return the first value in the queue', function () {
-  var spacingMemo = new _spacememo.SpacingMemo();
+  var spacingMemo = new _spacememo.SpacedMemo();
   spacingMemo.insertValue('value1', {
     domain: 'beginner'
   });
@@ -50,7 +50,7 @@ test('getValue should return the first value in the queue', function () {
   expect(spacingMemo.getValue()).toEqual('value1');
 });
 test('evaluate should increase the score and move the value to a higher position in the queue if goodOrBadResponseBoolean is true', function () {
-  var spacingMemo = new _spacememo.SpacingMemo();
+  var spacingMemo = new _spacememo.SpacedMemo();
   spacingMemo.insertValue('value1', {
     domain: 'beginner'
   });
@@ -74,7 +74,7 @@ test('evaluate should increase the score and move the value to a higher position
   });
 });
 test('if evaluate score is mayor to queue length when is correct, evaluate value should span tha last position', function () {
-  var spacingMemo = new _spacememo.SpacingMemo();
+  var spacingMemo = new _spacememo.SpacedMemo();
   spacingMemo.insertValue('value1', {
     domain: 'beginner'
   });
@@ -102,7 +102,7 @@ test('if evaluate score is mayor to queue length when is correct, evaluate value
   });
 });
 test('evaluate should decrease the score and move the value to a lower position in the queue if goodOrBadResponseBoolean is false', function () {
-  var spacingMemo = new _spacememo.SpacingMemo();
+  var spacingMemo = new _spacememo.SpacedMemo();
   spacingMemo.insertValue('value1', {
     domain: 'beginner'
   });
@@ -125,7 +125,7 @@ test('evaluate should decrease the score and move the value to a lower position 
   });
 });
 test('getSpaceMap should return the valuesQueue and valuesMap', function () {
-  var spacingMemo = new _spacememo.SpacingMemo();
+  var spacingMemo = new _spacememo.SpacedMemo();
   spacingMemo.insertValue('value1', {
     domain: 'beginner'
   });
@@ -149,10 +149,10 @@ test('getSpaceMap should return the valuesQueue and valuesMap', function () {
   });
 });
 test('Should instantiate SpacingMemo queue with preconfigured data', function () {
-  var spacingMemo1 = new _spacememo.SpacingMemo();
+  var spacingMemo1 = new _spacememo.SpacedMemo();
   expect(spacingMemo1.getSpaceMap().valuesQueue).toEqual([]);
   expect(spacingMemo1.getSpaceMap().valuesMap).toEqual({});
-  var spacingMemo2 = new _spacememo.SpacingMemo({
+  var spacingMemo2 = new _spacememo.SpacedMemo({
     valuesQueue: ['value1', 'value2'],
     valuesMap: {
       value1: {

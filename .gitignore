@@ -11,4 +11,4 @@ __pycache__/
 .cache/
 *.pyc
 dist/spacememo-0.1.0.tar.gz
-
+.vscode/

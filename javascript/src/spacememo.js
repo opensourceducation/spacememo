@@ -1,4 +1,4 @@
-export function SpacingMemo(config = {}){
+export function SpacedMemo(config = {}){
   this.valuesQueue = config.valuesQueue || []
   ;this.valuesMap = config.valuesMap || {}
   if(config){
