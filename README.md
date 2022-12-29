@@ -72,7 +72,7 @@ let configValue = spacedRepetition.getSpaceMap().values_map
 
 spacedRepetition = new SpacedMemo({
   values_queue: userReorderList,
-  values_map: spacedRepetition.getSpaceMap().values_map
+  values_map: configValue
 })
 
 // or add in a persistent database and reuse in next sessions
@@ -87,9 +87,9 @@ spacedRepetition.insertValue('idQuestion6', {initialPositionInQueue: 3, domain: 
 
 ## The purpose of this library
 
-Spaced repetition algoritms based in queues gives lighter libraries and more easy to use
+Spaced repetition algorithms based in queues gives lighter libraries and more easy to use
 
-Any approach that you decide to implement a spaced repetition algoritm or library is good. However no matter what complex mechanism the library use. The important thing of spaced repetition is:
+Any approach that you decide to implement a spaced repetition algorithm or library is good. However no matter what complex mechanism the library use. The important thing of spaced repetition is:
 
 - Estimulate the newest information more often than information with more domain
 - Maintenance old knowledge distant little by little to avoid forget it
