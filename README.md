@@ -52,7 +52,7 @@ let spacedRepetition = new SpacedMemo();
 spacedRepetition.insertValue('idQuestion1');
 
 // multiple values
-['id1', 'id2', 'id3'].forEach(id => spacedRepetition.insertValue(id);)
+['id1', 'id2', 'id3'].forEach(id => spacedRepetition.insertValue(id))
 
 // optionally you can config a level of previous expertise to decrease initial frecuency instead default 'beginner' value
 spacedRepetition.insertValue('idQuestion6', {domain: 'medium'})
