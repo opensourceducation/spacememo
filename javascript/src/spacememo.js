@@ -2,10 +2,10 @@ export function SpacedMemo(config = {}){
   this.valuesQueue = config.valuesQueue || []
   ;this.valuesMap = config.valuesMap || {}
   if(config){
-    (!config.valuesQueue || !config.valuesQueue) && new Error('Your Spacing Memo config Object is broken. Please Review it: ' + config)
+    (!config.valuesQueue || !config.valuesQueue) && new Error('Your SpacedMemo config Object is broken. Please Review it: ' + config)
   } 
   return {
-    insertValue:(valueId, optionalParams = {domain: 'beginner', initialPositionInQueue: this.valuesQueue.length}) => {
+    insertValue:(valueId, optionalParams = {domain: 'b', initialPositionInQueue: this.valuesQueue.length}) => {
       let {domain, initialPositionInQueue} = optionalParams 
       initialPositionInQueue = initialPositionInQueue > this.valuesQueue.length || initialPositionInQueue == undefined ? this.valuesQueue.length : initialPositionInQueue
       if(this.valuesQueue.length == 0){

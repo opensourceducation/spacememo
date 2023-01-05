@@ -1,6 +1,6 @@
 {
   "name": "spacememo",
-  "version": "0.1.38",
+  "version": "0.1.39",
   "description": "A nanolibrary for apply the “space memo repetition” in learning purposes apps",
   "main": "spacememo.js",
   "scripts": {
@@ -18,6 +18,11 @@
   ],
   "author": "opensourceducation",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opensourceducation/spacememo.git"
+  },
+  "readme": "../README.md",
   "devDependencies": {
     "@babel/cli": "^7.20.7",
     "@babel/core": "^7.20.7",
