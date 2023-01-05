@@ -5,7 +5,7 @@ class SpacedMemo:
         self._values_map = config['values_map'] if config['values_map'] else {
         }
 
-    def insertValue(self, valueId, optionalParams={'domain': 'beginner', 'initialPositionInQueue': None}):
+    def insertValue(self, valueId, optionalParams={'domain': 'b', 'initialPositionInQueue': None}):
         domain = optionalParams['domain']
         initialPositionInQueue = optionalParams['initialPositionInQueue']
         if initialPositionInQueue == None or initialPositionInQueue > len(self._values_queue):

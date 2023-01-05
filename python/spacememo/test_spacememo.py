@@ -77,3 +77,20 @@ def test_insert_value_any_value():
         'score': 2, 'needsRevisionScore': None, 'implemented': False}, 'value3': {'score': 1, 'needsRevisionScore': None, 'implemented': False}}})
     assert memo2.getSpaceMap() == {'values_queue': ['value1'], 'values_map': {'value1': {'score': 2, 'needsRevisionScore': 5, 'implemented': False}, 'value2': {
         'score': 2, 'needsRevisionScore': None, 'implemented': False}, 'value3': {'score': 1, 'needsRevisionScore': None, 'implemented': False}}}
+
+
+def test_spaced_memo_with_preconfigured_data():
+    memo = SpacedMemo({
+        'values_queue': ['value1', 'value2'],
+        'values_map': {
+            'value1': {'score': 0, 'needsRevisionScore': None, 'implemented': False},
+            'value2': {'score': 0, 'needsRevisionScore': None, 'implemented': False},
+        },
+    })
+    assert memo.getSpaceMap() == {
+        'values_queue': ['value1', 'value2'],
+        'values_map': {
+            'value1': {'score': 0, 'needsRevisionScore': None, 'implemented': False},
+            'value2': {'score': 0, 'needsRevisionScore': None, 'implemented': False},
+        },
+    }
