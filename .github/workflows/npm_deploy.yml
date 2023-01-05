@@ -19,22 +19,6 @@ jobs:
         run: |
           cd javascript/
           npm install
-      - name: Get current version
-        run: |
-          cd javascript/
-          npm version --no-git-tag-version patch
-      - name: Increment version
-        run: |
-          cd javascript/
-          npm version patch
-      - name: Commit and push new version
-        run: |
-          cd javascript/
-          git config --global user.email ${{ secrets.USER_EMAIL_GITHUB }}
-          git config --global user.name ${{ secrets.USER_NAME_GITHUB }}
-          git add package.json
-          git commit -m "Release v$(node -p "require('./package.json').version")"
-          git push
       - name: Run tests
         run: |
           cd javascript/

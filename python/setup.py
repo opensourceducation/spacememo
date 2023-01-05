@@ -15,7 +15,7 @@ setup(
     description='📘 a python nanolibrary for apply “spaced repetition” in learning purposes apps 📙',
     long_description=open('../README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/opensourceducation',
+    url='https://github.com/opensourceducation/spacememo',
     license='MIT license',
     keywords=['srs',
               'learning',
