@@ -1,6 +1,6 @@
 {
   "name": "spacememo",
-  "version": "0.1.35",
+  "version": "0.1.36",
   "description": "A nanolibrary for apply the “space memo repetition” in learning purposes apps",
   "main": "spacememo.js",
   "scripts": {
