@@ -1,7 +1,7 @@
 {
   "name": "spacememo",
-  "version": "0.2.3",
-  "description": "A nanolibrary for apply the “space memo repetition” in learning purposes apps",
+  "version": "0.2.4",
+  "description": "A nanolibrary for apply the “spaced repetition” in learning purposes apps",
   "main": "spacememo.js",
   "scripts": {
     "test": "babel src --out-dir compiled --copy-files && jest --verbose",
