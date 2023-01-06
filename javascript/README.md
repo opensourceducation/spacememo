@@ -8,21 +8,14 @@
 
 <br>
 <p align="center">
-  <a href="https://badge.fury.io/js/spacememo"><img src="https://badge.fury.io/js/spacememo.svg" alt="npm version" height="18"></a>
-  <img src="https://github.com/opensourceducation/spacememo/actions/workflows/npm_deploy.yml/badge.svg">
+  Forget to logical process to know when to repeat the information for the optimal learning process of the user
 </p>
 
 <p align="center">
-  <a href="https://badge.fury.io/py/spacememo"><img src="https://badge.fury.io/py/spacememo.svg" alt="PyPI version" height="18"></a>
-    <img src="https://github.com/opensourceducation/spacememo/actions/workflows/pip_deploy.yml/badge.svg">
-  </p>
+  Ideal for quizzes, micro learning, and practical exercises what requires domain
 </p>
 
 <br>
-
-Forget to logical process to know when to repeat the information for the optimal learning process of the user
-
-Ideal for quizzes, micro learning, and practical exercises what requires domain
 
 <br>
 <h2 align="center">Installation</h2>
