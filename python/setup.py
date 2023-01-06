@@ -9,7 +9,7 @@ setup(
     name='spacememo',
     packages=['spacememo'],
     python_requires=">=3.6",
-    version='0.1.7',
+    version='0.2.0',
     author='opensourceducation',
     author_email='githubpersonalfor@gmail.com',
     description='📘 a python nanolibrary for apply “spaced repetition” in learning purposes apps 📙',

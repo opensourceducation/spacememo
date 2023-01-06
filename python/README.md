@@ -35,12 +35,12 @@ spacedRepetition.insertValue('idQuestion1');
 [memo.insert_value(id) for id in ['id1', 'id2', 'id3']]
 
 # optionally you can config a level of previous expertise to decrease initial frecuency instead default 'beginner' value
-memo.insert_value('idQuestion6', {'domain': 'medium'})
-memo.insert_value('idQuestion6', {'domain': 'expert'})
+memo.insert_value('id_question6', {'domain': 'medium'})
+memo.insert_value('id_question6', {'domain': 'expert'})
 
 
 # spacememo gives the question or excersice that you need to resolve
-memo.getValue() # returns an id
+memo.get_value() # returns an id
 
 # evaluate the performance in last excersice or question with a boolean result
 memo.evaluate(False)
