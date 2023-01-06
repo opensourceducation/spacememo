@@ -30,7 +30,7 @@ jobs:
         cd python/
         python setup.py sdist upload
         twine check dist/*
-        twine upload dist/*
+        twine upload --skip-existing dist/*
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PUBLISH }}
