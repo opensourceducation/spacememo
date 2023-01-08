@@ -29,7 +29,7 @@ from spacememo import SpacedMemo
 let memo = SpacedMemo()
 
 # insert new values with the id number or string of the excercise or question
-spacedRepetition.insertValue('idQuestion1');
+memo.insertValue('idQuestion1');
 
 # multiple values
 [memo.insert_value(id) for id in ['id1', 'id2', 'id3']]
