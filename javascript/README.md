@@ -30,10 +30,10 @@ npm install spacememo
 ```
 import { SpacedMemo } from "spacememo"
 
-let spacedRepetition = new SpacedMemo();
+let spacedRepetition = new SpacedMemo()
 
 // insert new values with the id number or string of the excercise or question
-spacedRepetition.insertValue('idQuestion1');
+spacedRepetition.insertValue('idQuestion1')
 
 // multiple values
 ['id1', 'id2', 'id3'].forEach(id => spacedRepetition.insertValue(id))
