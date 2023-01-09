@@ -1,1 +1,1 @@
-export { SpacedMemo } from './compiled/spacememo'
+export { SpacedMemo } from './src/spacememo'
