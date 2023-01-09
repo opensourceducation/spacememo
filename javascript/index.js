@@ -1,0 +1,1 @@
+export { SpacedMemo } from './src/spacememo'
