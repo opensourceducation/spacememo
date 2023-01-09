@@ -28,7 +28,7 @@ npm install spacememo
 <h2 align="center">Usage</h2>
 
 ```
-import { SpacedMemo } from "./spacememo.js"
+import { SpacedMemo } from "spacememo"
 
 let spacedRepetition = new SpacedMemo();
 

@@ -93,7 +93,7 @@ memo.insert_value('idQuestion6', {'initial_position_in_queue': 3, 'domain': 'med
 <h4 align="center">Javascript</h4>
 
 ```
-import { SpacedMemo } from "./spacememo.js"
+import { SpacedMemo } from "spacememo"
 
 let spacedRepetition = new SpacedMemo();
 
