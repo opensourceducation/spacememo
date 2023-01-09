@@ -1,6 +1,6 @@
 {
   "name": "spacememo",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "A nanolibrary for apply the “spaced repetition” in learning purposes apps",
   "main": "spacememo.js",
   "scripts": {
@@ -27,8 +27,7 @@
   "readme": "https://github.com/opensourceducation/spacememo/tree/main/javascript#readme",
   "files": [
     "index.js",
-    "compiled/spacememo.js",
-    "!README.md"
+    "compiled/spacememo.js"
   ],
   "devDependencies": {
     "@babel/cli": "^7.20.7",

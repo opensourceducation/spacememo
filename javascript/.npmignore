@@ -2,6 +2,4 @@ compiled/
 *.test.js
 semantic-release.config.js
 .babelrc
-*.md
-src/spacememo.test.js
 package-lock.json
